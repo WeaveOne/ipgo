@@ -15,7 +15,7 @@ go get github.com/WillVi/ipgo
 ```go
 ipgo.GetFile("ip2region.db地址，自行进入上放github位置下载")
 search, _ := ipgo.BtreeSearch("xxx.xxx.xxx.xxx")
-fmt.Println(searcj)
+fmt.Println(search)
 ```
 
 
