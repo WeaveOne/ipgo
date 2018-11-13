@@ -141,13 +141,13 @@ func InetAtoN(ip string) int64 {
 	return ret.Int64()
 }
 
-func GetFile(path string) error {
+func New(path string) (*os.File, error) {
 	file, e := os.Open(path)
 	if e != nil {
-		return fmt.Errorf("%v please check the path", e)
+		return nil, fmt.Errorf("%v please check the path", e)
 	}
 	db = file
-	return e
+	return file, e
 }
 func GetIntLong(b []byte, offset int) int64 {
 	v1 := offset
